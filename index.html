@@ -21,13 +21,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <link rel="icon" href="images/prof_pic_rest.png">
 
 
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -37,18 +37,21 @@
                 <name>Anagh Malik</name>
               </p>
               <p>I am a first year Computer Science PhD student at the <a href="https://www.utoronto.ca/">University of Toronto</a>, supervised by <a href="https://davidlindell.com/">David Lindell</a>.
+                I am affiliated with both the  <a href="https://compimaging.dgp.toronto.edu/">Toronto Computational Imaging Group</a>  and the  <a href="https://vectorinstitute.ai/">Vector Institute</a>. 
               </p>
-              <p>Before this I did my Masters at the <a href="https://www.imperial.ac.uk/dyson-robotics-lab">Dyson Robotics Lab</a> at Imperial College London, working with Prof. <a href="https://www.doc.ic.ac.uk/~ajd/">Andrew Davison</a> and Prof. <a href="https://www.ronnieclark.co.uk/">Ronald Clark</a>.
+              <p>Before this I did my MRes at the <a href="https://www.imperial.ac.uk/dyson-robotics-lab">Dyson Robotics Lab</a> at <a href="https://www.imperial.ac.uk">Imperial College London</a>, where I worked on self-supervised segmentation, under the supervision of <a href="https://www.doc.ic.ac.uk/~ajd/">Andrew Davison</a> and <a href="https://www.ronnieclark.co.uk/">Ronald Clark</a>.
               </p>
               <p style="text-align:center">
-                <a href="mailto:anagh.malik18@imperial.ac.uk">Email</a> &nbsp/&nbsp
+                <a href="mailto:anagh@cs.toronto.edu">Email</a> &nbsp/&nbsp
                 <a href="https://twitter.com/anagh_malik">Twitter</a> &nbsp/&nbsp
-                <a href="Documents/resume.pdf">Resume</a>
+                <a href="Documents/resume.pdf">Resume</a>&nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?hl=en&user=GSP6casAAAAJ">Google Scholar</a>
+
 
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/anagh_prof.jpeg"><img style="width:90%;max-width:90%" alt="profile photo" src="images/anagh_prof.jpeg" class="hoverZoomLink"></a>
+              <a href="images/prof_pic_rest.png"><img style="width:90%;max-width:90%" alt="profile photo" src="images/prof_pic_rest.png" class="hoverZoomLink"></a>
             </td>
           </tr>
 
@@ -66,18 +69,61 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+
+          <tr onmouseout="tnerf_stop()" onmouseover="tnerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='tnerf_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="TransientNeRF/static/videos/final_vids/cinema_5_89.webm" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='TransientNeRF/static/videos/cinema_5_150000_test89_RGB.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function tnerf_start() {
+                  document.getElementById('tnerf_image').style.opacity = "1";
+                }
+      
+                function tnerf_stop() {
+                  document.getElementById('tnerf_image').style.opacity = "0";
+                }
+                tnerf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://anaghmalik.com/TransientNeRF">
+                <papertitle>Transient Neural Radiance Fields for Lidar View Synthesis and 3D Reconstruction</papertitle>
+              </a>
+              <br>
+              <strong>Anagh Malik</strong>, <a href="https://www.cs.toronto.edu/~parsa/">Parsa Mirdehghan</a>, <a href="https://sotirisnousias.com/">Sotiris Nousias</a>, <a href="https://www.cs.toronto.edu/~kyros/">Kiriakos N. Kutulakos</a>, <a href="https://davidlindell.com/">David B. Lindell</a>
+              <br>
+              <em>In submission</em>, 2023
+              <br>
+              <a href="https://anaghmalik.com/TransientNeRF">project page</a>
+              /
+              <a href="https://youtu.be/m1sc4-h7ma8">video</a>
+              /
+              <a href="https://anaghmalik.com/TransientNeRF">arXiv</a>
+              <p></p>
+              <p>
+              We introduce a method to do novel view lidar synthesis, allowing sparse view scene reconstruction.
+              </p>
+            </td>
+          </tr>
+      
+
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/SegDIP.png" alt="clean-usnob" width="160" height="160">
             </td>
-            <td width="100%" valign="middle">
+            <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://anaghmalik.github.io/SegDIP/SegDIP.pdf">
                 <papertitle>SegDIP: The Unreasonable Effectiveness of Randomly-Initialized CNNs for Interactive Segmentation</papertitle>
               </a>
               <br>
               <strong>Anagh Malik</strong>, <a href="https://shuaifengzhi.com/">Shuaifeng Zhi</a>, <a href="https://marwan99.github.io/">Marwan Taher</a>, <a href="https://www.ronnieclark.co.uk/">Ronald Clark</a>, <a href="https://www.doc.ic.ac.uk/~ajd/">Andrew Davison</a>
               <br>
-              <em>In Progress</em>, 2021
+              <em></em> 2021
               <p>We train an encoder-decoder network to map from xy-coordinates to RGB values and semantic classes, allowing real-time segmentation of an image.</p>
             </td>
           </tr>
@@ -86,7 +132,7 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/SIPD.png" alt="clean-usnob" width="160" height="160">
             </td>
-            <td width="100%" valign="middle">
+            <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/pdf/2111.11561.pdf">
                 <papertitle>Strategies for the Iterated Prisoner’s Dilemma</papertitle>
               </a>

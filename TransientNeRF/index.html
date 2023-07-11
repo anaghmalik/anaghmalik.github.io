@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="NeRF, TransientNeRF, Transient">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transient Neural Radiance Fields for Lidar View Synthesis and 3D Reconstruction</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/videos/masked_images/chef.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Transient Neural Radiance Fields
+            for Lidar View Synthesis and 3D Reconstruction</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://anaghmalik.github.io/">Anagh Malik</a>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.toronto.edu/~parsa/">Parsa Mirdehghan</a>,</span>
+            <span class="author-block">
+              <a href="https://sotnousias.github.io/">Sotiris Nousias</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.cs.toronto.edu/~kyros/">Kiriakos N. Kutulakos</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://davidlindell.com/">David B. Lindell</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> University of Toronto</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> Vector Institute</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://anaghmalik.github.io/TransientNeRF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming Soon!)</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/m1sc4-h7ma8"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://anaghmalik.github.io/TransientNeRF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon!)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://anaghmalik.github.io/TransientNeRF"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Coming Soon!)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/videos/teaser6.png" class="interpolation-image" alt="Interpolate start reference image."/>
+
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Transient NeRF</span> is able to render novel lidar scans from just a few sparse prior measurments.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/final_vids/chef_5_360.webm"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/final_vids/cinema_5_89.webm"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/final_vids/ficus_5_7img.webm"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/final_vids/lego_5_7img.webm"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/final_vids/hotdog_5_7img.webm"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/final_vids/food_5_20.webm"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/final_vids/boots_3_6.webm"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="subtitle has-text-centered">
+    Novel view Lidar renders from Transient NeRF trained with at most 5 views. 
+  </h2>
+  <br/>
+
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://youtube.com/embed/m1sc4-h7ma8"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Neural radiance fields (NeRFs) have become a ubiquitous tool for modeling scene appearance and geometry from multiview imagery. Recent work has also begun to explore how to use additional supervision from lidar or depth sensor measurements in the NeRF framework. However, previous lidar-supervised NeRFs focus on rendering conventional camera imagery and use lidar-derived point cloud data as auxiliary supervision; thus, they fail to incorporate the underlying image formation model of the lidar. Here, we propose a novel method for rendering \textit{transient} NeRFs that take as input the raw, time-resolved photon count histograms measured by a single-photon lidar system, and we seek to render such histograms from novel views. Different from conventional NeRFs, the approach relies on a time-resolved version of the volume rendering equation to render the lidar measurements and capture transient light transport phenomena at picosecond timescales. We evaluate our method on a first-of-its-kind dataset of simulated and captured transient multiview scans from a prototype single-photon lidar. Overall, our work brings NeRFs to a new dimension of imaging at transient timescales, newly enabling rendering of transient imagery from novel views. Additionally, we show that our approach recovers improved geometry and conventional appearance compared to point cloud-based supervision when training on few input viewpoints. Transient NeRFs may be especially useful for applications which seek to simulate raw lidar measurements for downstream tasks in autonomous driving, robotics, and remote sensing.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+
+  
+  <div class="container is-max-desktop">
+
+
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Transient NeRF uses an efficient neural representation with a hashing-based feature grid to parameterize the radiance and density of a scene.
+            To synthesize a novel lidar view we query the neural representation at points along a ray corresponding to a pixel coordinate in the lidar image.
+            We then use these network outputs alongside our rendering equation, which produces time-resolved measurements of light transport in the scene. 
+            Our rendering equation models lidar image formation, including the shape of the laser pulse and radiometric falloff effects, and we supervise on time-resolved photon count histograms from multiview lidar scans.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+
+      <img src="./static/videos/method.png" class="interpolation-image" alt="Interpolate start reference image."/>
+        </div>
+        <br/>
+
+      </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+
+  
+  <div class="container is-max-desktop">
+
+
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Dataset</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Apart from results on simulated data, we test our method on a dataset we capture using our prototype single photon lidar system. 
+          </p>
+        </div>
+
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-4">Hardware prototype</h2>
+            <p>
+              The hardware system contains a picosecond laser that shares an optical path with a single-photon avalanche diode. 
+              We scan the scene using two-axis scanning mirrors. The scenes are mounted on a rotation stage to facilitate multiview scanning.
+              </p>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/hardware_prototype.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-4">Captured dataset</h2>
+            <p>
+              The dataset consists of 6 scenes captured from 20 different viewpoints each using the prototype single-photon lidar.               </p>
+              <img src="./static/videos/captured_dataset.png" class="interpolation-image" alt="Interpolate start reference image."/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
+
+
+<section class="section">
+
+  
+  <div class="container is-max-desktop">
+
+
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <!-- Interpolating. -->
+        <div class="content has-text-justified">
+          <p>
+          By integrating the transient measurements over time, we can recover a conventional image similar to other NeRF methods such as DS-NeRF or Urban-NeRF. Our method allows recovering relatively high quality models of appearance and geometry after training on as few as two input views which observe the scene from opposite sides.
+          </p>
+        </div>
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-4">Simulated results</h2>
+            <p>
+              </p>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/three_views_simulation.mp4" type="video/mp4">
+            </video>
+
+            <br/>
+
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/five_views_simulation.mp4" type="video/mp4">
+            </video>
+
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-4">Captured results</h2>
+            <p>
+              </p>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/captured_results.mp4" type="video/mp4">
+            </video>
+
+            <br/>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+<!-- 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./index.html">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/anaghmalik" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Template can be found <a
+              href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
