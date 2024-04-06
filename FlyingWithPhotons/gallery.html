@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Flying with Photons: Rendering Novel Views of Propagating Light</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="data/assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="data/assets/css/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/scene_pics/jfk_32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/scene_pics/jfk_16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="robots" content="noindex">
+
+    <meta property="og:site_name" content="FlyingWithPhotons" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="Flying With Photons: Rendering Novel Views of Propagating Light" />
+    <meta property="og:description" content="Flying With Photons: Rendering Novel Views of Propagating Light." />
+    <meta property="og:url" content="" />
+
+</head>
+
+<body>
+    <div class="highlight-clean" style="padding-bottom: 0px; padding-top: 20px;">
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px">
+            <h1 class="text-center" style="font-size:35px;"><b>Flying With Photons</b>: <br>Rendering Novel Views of Propagating Light</h1>
+        </div>
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
+            <div class="authors">
+                <a href=https://anaghmalik.com/>
+                    Anagh Malik<sup>1,2</sup>
+                </a>&nbsp;
+                <a href=https://www.noahjuravsky.com//>
+                Noah Juravsky<sup>1,2</sup>
+                </a>&nbsp;
+                <a href=https://ryanpo.com//>
+                Ryan Po<sup>3</sup>
+                </a>&nbsp;
+                <a href=https://web.stanford.edu/~gordonwz/>
+                Gordon Wetzstein<sup>3</sup>
+                </a>&nbsp;
+                <a href=https://www.cs.toronto.edu/~kyros//>
+                Kiriakos N. Kutulakos<sup>1, 2</sup>&nbsp;
+                </a>
+                <a href=https://davidlindell.com/>
+                David B. Lindell<sup>1, 2</sup>&nbsp;
+                </a>
+                <br>
+            </div>
+
+            <div class="affiliations">
+                <span><sup>1</sup> University of Toronto </span>
+                <span><sup>2</sup> Vector Institute </span>
+                <span><sup>3</sup> Stanford University </span>
+            </div>
+        </div>
+        <div id="container">
+            <div class="buttons" style="margin-top: 8px; margin-bottom: 8px;">
+                <a class="btn btn-light" role="button" href="gallery.html">
+                    <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path>
+                    </svg>Paper
+                </a>
+                <a class="btn btn-light" role="button" href="gallery.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 
+                                1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 
+                                3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 
+                                2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                    Code
+                </a>
+                <a class="btn btn-light" role="button" href=https://youtu.be/dSFR8rs11vI>
+                    <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px" height="24px" viewBox="0 0 375 531">
+                        <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+    
+                        <!-- <polygon stroke="#FF0000" points="0.5, 0.866 459.5, 0.866 459.5, 265.87 0.5, 265.87 1,530.874 "></polygon> -->
+                    </svg>
+                    Video
+                </a>
+                <a class="btn btn-light" role="button" href="index.html">
+                    <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px" height="24px" viewBox="0 0 -100 100">
+                        <polygon stroke="#FF0000" points="0,0 0,100 50,100 50,0"> </polygon>
+                    </svg>
+                    Project
+                </a>
+            </div>
+            </div>
+        </div>
+
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Novel View Flythroughs</h2>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-xs-2 compare-title  compare-title-sm">
+                <p>Scene Image</p>
+            </div>
+            <div class="col-xs-2 compare-title">
+                <p>Transient Flythrough</p>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <img src="media/scene_pics/statue.png" alt="architecture" style="width: 100%">
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d3" loop playsinline autoPlay muted src="media/moving_videos/statue_ours.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <h6 class="caption">
+            <p>                    <p align="justify">
+                <i>David scene.</i> This captured scene is illuminated from the side by a pulse from a point source. The propagation reveals subsurface scattering on the candles and interreflections.
+            </p></h6>
+    </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="media/scene_pics/jfk.png" alt="architecture" style="width: 100%">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d7" loop playsinline autoPlay muted src="media/moving_videos/jfk_ours.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <h6 class="caption">
+            <p>                    <p align="justify">
+                <i>Kennedy scene.</i> Scene illuminated by a point source, consisting of a mirror, statue, and multiple other objects. The transient reveals the delay in the propagation on the mirror and interreflections.
+            </p>
+            </h6>
+            
+    </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="media/scene_pics/mirror.png" alt="architecture" style="width: 100%">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d7" loop playsinline autoPlay muted src="media/moving_videos/mirror_ours.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <h6 class="caption">
+            <p>                    <p align="justify">
+                <i>Mirror scene.</i> A mirror and diffuser place in a tank of cloudy water. We illuminate the scene with a laser beam. We can observe the specular reflection of the laser and scattering off the diffuse target.</h6>
+   </p>
+    </div>
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="media/scene_pics/grating.png" alt="architecture" style="width: 100%">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d7" loop playsinline autoPlay muted src="media/moving_videos/grating_ours.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+
+            <h6 class="caption">
+                <p>                    <p align="justify">
+                    <i>Diffraction scene.</i> A diffraction grating in a fish tank. We see the light pulse being separated into the zeroth, first, second and higher order diffraction modes.</h6>
+                </p>
+                </div>
+
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="media/scene_pics/coke.png" alt="architecture" style="width: 100%">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="mav3d7" loop playsinline autoPlay muted src="media/moving_videos/coke_multiview_ours.mp4" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <h6 class="caption">
+
+            <p> <p align="justify"> <i>Coke scene.</i> A laser pulse is sent through a coke bottle. Light can be seen scattering off liquid, hitting the ground plane, focusing on the cap and reflecting to the back. </h6>
+        </p>
+            </div>
+
+    </div>
+
+
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Citation</h2>
+                <code>
+                    @article{malik2024flying,<br>
+                    &nbsp; author = {Malik, Anagh and Juravsky, Noah and Po, Ryan and Wetzstein, Gordon and Kutulakos, Kiriakos N. and Lindell, David B.},<br>
+                    &nbsp; title  = {Flying with Photons: Rendering Novel Views of Propagating Light},<br>
+                    &nbsp; journal = {arXiv},<br>
+                    &nbsp; year   = {2024}<br>
+                }</code></div>
+        </div>
+    </div>
+        <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <footer>
+            <p> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a> and <a href="https://mv-dream.github.io/">MVDream</a>.</p>
+        </footer>
+    </div>
+    <script src="data/assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+</body>
+
+</html>
