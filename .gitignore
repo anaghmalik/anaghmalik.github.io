@@ -1,0 +1,36 @@
+# macOS metadata
+.DS_Store
+Icon?
+
+# Windows metadata
+Thumbs.db
+
+# Node.js dependencies & logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python caches & env
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# Build artifacts & temp files
+dist/
+build/
+tmp/
+*.tmp
+*.log
+
+# IDEs & editors
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+
+# Miscellaneous
+.vagrant/
+vendor/
