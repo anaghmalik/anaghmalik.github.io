@@ -77,6 +77,20 @@
 
       <div class="news-card">
       <div class="news-item">
+        <div class="news-date-pill">2026-05</div>
+        <div class="news-text">
+          <a href="https://apple.github.io/ml-velox/" target="_blank" rel="noopener noreferrer">
+            Velox
+          </a>
+          and
+          <a href="https://andrewyguo.github.io/dark3r_webpage/" target="_blank" rel="noopener noreferrer">
+            Dark3R
+          </a>
+          accepted to CVPR 2026!
+        </div>
+      </div>
+
+      <div class="news-item">
         <div class="news-date-pill">2026-01</div>
         <div class="news-text">
           I was featured in a<a href="https://youtu.be/P-4pbFcERnk" target="_blank" rel="noopener noreferrer">
@@ -191,6 +205,86 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="velox_stop()" onmouseover="velox_start()" bgcolor="#fbe5ba">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='velox_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="Figures/velox.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='Figures/velox.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function velox_start() {
+                  document.getElementById('velox_image').style.opacity = "1";
+                }
+                function velox_stop() {
+                  document.getElementById('velox_image').style.opacity = "0";
+                }
+                velox_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://apple.github.io/ml-velox/">
+                <papertitle>Velox: Learning Representations of 4D Geometry and Appearance</papertitle>
+              </a>
+              <br>
+              <strong>Anagh Malik</strong>, <a href="https://dorianchan.com/">Dorian Chan</a>, <a href="https://xiaoming-zhao.com/">Xiaoming Zhao</a>, <a href="https://davidlindell.com/">David B. Lindell</a>, <a href="https://www.onceltuzel.net/">Oncel Tuzel</a>, <a href="https://rick-chang.github.io/">Jen-Hao Rick Chang</a>
+              <br>
+              <em>CVPR</em>, 2026
+              <br>
+              <a href="https://apple.github.io/ml-velox/">project page</a>
+              /
+              <a href="https://arxiv.org/abs/2605.04527">arXiv</a>
+              /
+              <a href="https://github.com/apple/ml-velox">code</a>
+              <p></p>
+              <p>
+                A framework for learning compact latent representations of dynamic 4D objects from unstructured point clouds, enabling video-to-4D generation, cloth simulation, and 3D point tracking.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="dark3r_stop()" onmouseover="dark3r_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='dark3r_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="Figures/dark3r.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='Figures/dark3r.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function dark3r_start() {
+                  document.getElementById('dark3r_image').style.opacity = "1";
+                }
+                function dark3r_stop() {
+                  document.getElementById('dark3r_image').style.opacity = "0";
+                }
+                dark3r_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://andrewyguo.github.io/dark3r_webpage/">
+                <papertitle>Dark3R: Learning Structure from Motion in the Dark</papertitle>
+              </a>
+              <br>
+              <a href="https://andrewyguo.github.io/">Andrew Y. Guo</a>, <strong>Anagh Malik</strong>, <a href="https://sites.google.com/view/tedlasai/">SaiKiran Tedla</a>, <a href="https://dongdong93.github.io//">Yutong Dai</a>, <a href="https://ca.linkedin.com/in/yiqian22/">Yiqian Qin</a>, <a href="https://zachsalehe.github.io/">Zach Salahe</a>, <a href="https://benattal.github.io/">Benjamin Attal</a>, <a href="https://sotirisnousias.com/">Sotiris Nousias</a>, <a href="https://www.cs.toronto.edu/~kyros/">Kiriakos N. Kutulakos</a>, <a href="https://davidlindell.com/">David B. Lindell</a>
+              <br>
+              <em>CVPR</em>, 2026 &nbsp <font color="red"><strong>(Highlight)</strong></font>
+              <br>
+              <a href="https://andrewyguo.github.io/dark3r_webpage/">project page</a>
+              /
+              <a href="https://arxiv.org/abs/2603.05330">arXiv</a>
+              /
+              <a href="https://github.com/andrewyguo/Dark3R">code</a>
+              <p></p>
+              <p>
+                Recovers camera pose and depth maps from noisy low-light raw images for dense neural reconstruction, enabling accurate 3D scene recovery in extremely low-light conditions.
+              </p>
+            </td>
+          </tr>
 
           <tr onmouseout="nac_stop()" onmouseover="nac_start()" bgcolor="#fbe5ba">
             <td style="padding:20px;width:25%;vertical-align:middle">
